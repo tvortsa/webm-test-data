@@ -1,13 +1,24 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
-module.exports = {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import HtmlWebpackPugPlugin from 'html-webpack-pug-plugin';
+
+export default {
     entry: './index.js',
-    mode: 'development',
+    mode: 'production',
     output: {
         path: __dirname + '/dist',
         filename: 'index_bundle.js'
     },
     plugins: [
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin({
+            filename: 'output.pug',
+            minify: false
+        }),
+        new HtmlWebpackPugPlugin()
     ]
 }
