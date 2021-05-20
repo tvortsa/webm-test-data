@@ -1,14 +1,7 @@
 extends ../templates/main.pug
-block append scripts
-
-  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/css/uikit.min.css')
-
-  script(src='https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit.min.js')
-  script(src='https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit-icons.min.js')
+block header
+  include ../components/header.pug
 block content
-  .uk-grid.uk-text-center( class="uk-child-width-expand@s")
-
+  include ../components/content.pug
 block footer
-  .uk-container.uk-container-expand.uk-align-center
-    p
-      | я футер
+  include ../components/footer.pug
