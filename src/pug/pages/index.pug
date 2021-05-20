@@ -1,14 +1,14 @@
-doctype html
-head
-  meta(charset='utf-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1')
-  title Hello Bulma!
-  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css')
-section.section
-  .container
-    h1.title
-      | Hello World
-    p.subtitle
-      | My first website with 
-      strong Bulma
-      | !
+extends ../templates/main.pug
+block append scripts
+
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/css/uikit.min.css')
+
+  script(src='https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit.min.js')
+  script(src='https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit-icons.min.js')
+block content
+  .uk-grid.uk-text-center( class="uk-child-width-expand@s")
+
+block footer
+  .uk-container.uk-container-expand.uk-align-center
+    p
+      | я футер

@@ -8,6 +8,9 @@ const __dirname = dirname(__filename);
 
 const PAGES_DIR = `./src/pug/pages/`
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
+const data = JSON.parse(fs.readFileSync('data.json'))
+
+console.dir(`data: ${data.page_meta.h1}`);
 
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import HtmlWebpackPugPlugin from 'html-webpack-pug-plugin';
