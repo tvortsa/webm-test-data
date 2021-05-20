@@ -42,6 +42,11 @@ export default {
         new HtmlWebpackPlugin({
             template: `${PAGES_DIR}/index.pug`,
             filename: 'index.html',
+            templateParameters: {
+                title: 'foo',
+                content: 'bar',
+                brdcrmbs: data.breadcrumbs
+              },
             minify: false,
             inject: true
         }),
