@@ -1,6 +1,5 @@
 .hero-body
-  .container.has-text-centered
-    p.title
-      | Title
-    p.subtitle
-      | Subtitle
+    .container.has-navbar-fixed-top.has-navbar-fixed-bottom
+        each car in stock 
+            include card_car
+            +car_card(car)

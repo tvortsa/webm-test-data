@@ -1,13 +1,8 @@
 .hero-head
-    header.navbar
+    header.navbar.is-fixed-top
         .container
         .navbar-brand
-            a.navbar-item
-            span.navbar-burger(data-target='navbarMenuHeroC')
-            span
-            span
-            span
-        nav.breadcrumb(aria-label='breadcrumbs')
-            ul
-                each val in brdcrmbs
-                    li #[a(href= val.href) #{val.text}] 
+            nav.breadcrumb(aria-label='breadcrumbs')
+                ul
+                    each val in brdcrmbs
+                        li #[a(href= val.href) #{val.text}] 

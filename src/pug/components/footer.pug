@@ -1,16 +1,6 @@
 .hero-foot
-  nav.tabs.is-boxed.is-fullwidth
-    .container
-      ul
-        li.is-active
-          a Overview
-        li
-          a Modifiers
-        li
-          a Grid
-        li
-          a Elements
-        li
-          a Components
-        li
-          a Layout
+    nav.navbar.tabs.is-boxed.is-fullwidth.is-fixed-bottom
+        .container
+            ul
+                each nav_item in navig
+                    li #[a(href=nav_item.href) #{nav_item.text}]

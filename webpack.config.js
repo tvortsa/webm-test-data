@@ -45,7 +45,9 @@ export default {
             templateParameters: {
                 title: 'foo',
                 content: 'bar',
-                brdcrmbs: data.breadcrumbs
+                brdcrmbs: data.breadcrumbs,
+                navig: data.nav,
+                stock: data.stock
               },
             minify: false,
             inject: true

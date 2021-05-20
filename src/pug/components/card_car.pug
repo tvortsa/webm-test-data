@@ -1,0 +1,32 @@
+mixin car_card(_data)
+    article.media
+        figure.media-left
+            p.image.is-4by3
+                img(src='./src/images/'+_data.image alt='Placeholder image')
+        .media-content
+            .content
+                p.title.is-4 _data.price_currency
+        .media-content
+            p.title.is-4 _data.make
+            p.subtitle.is-6 model
+            .content
+                _data.title
+                a(href=_data.href) link
+                br
+                time(datetime=_data.year) _data.year
+        .media-right
+            table
+                thead
+                    tr
+                    th One
+                    th Two
+                tbody
+                    tr
+                    td Three
+                    td Four
+                    tr
+                    td Five
+                    td Six
+                    tr
+                    td Seven
+                    td Eight 
