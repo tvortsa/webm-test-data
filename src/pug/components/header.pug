@@ -10,4 +10,4 @@
         nav.breadcrumb(aria-label='breadcrumbs')
             ul
                 each val in brdcrmbs
-                    li= "a(href=" + val.href + ")" + val.text
+                    li #[a(href= val.href) #{val.text}] 
