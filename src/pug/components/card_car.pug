@@ -5,28 +5,30 @@ mixin car_card(_data)
                 img(src='./src/images/'+_data.image alt='Placeholder image')
         .media-content
             .content
-                p.title.is-4 _data.price_currency
-        .media-content
-            p.title.is-4 _data.make
-            p.subtitle.is-6 model
+                p.title.is-4 #{_data.price_currency}
+        .media-content.has-text-left
+            p.title.is-4 #{_data.make}
+            p.subtitle.is-6 model: #{_data.model}
+            p.is-7 type: #{_data.type}
             .content
-                _data.title
+                p #{_data.title}
                 a(href=_data.href) link
                 br
-                time(datetime=_data.year) _data.year
+                p.title.is-5 #{_data.year}
         .media-right
             table
                 thead
-                    tr
-                    th One
-                    th Two
                 tbody
                     tr
-                    td Three
-                    td Four
+                        td 
+                            p power 
+                                span.is-size-7 
+                                    | (#{_data.power_measure}) 
+                                    | :  
+                        td.has-text-right #{_data.power}
                     tr
-                    td Five
-                    td Six
+                        td Five
+                        td Six
                     tr
-                    td Seven
-                    td Eight 
+                        td Seven
+                        td Eight 
