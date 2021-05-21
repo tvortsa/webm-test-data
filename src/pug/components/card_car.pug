@@ -4,17 +4,18 @@ mixin car_card(_data)
             p.image.is-4by3
                 img(src='./src/images/'+_data.image alt='Placeholder image')
         .media-content
-            .content
-                p.title.is-4 #{_data.price_currency}
-        .media-content.has-text-left
             p.title.is-4 #{_data.make}
             p.subtitle.is-6 model: #{_data.model}
             p.is-7 type: #{_data.type}
             .content
                 p #{_data.title}
-                a(href=_data.href) link
                 br
-                p.title.is-5 #{_data.year}
+                .has-text-right
+                    a(href=_data.href)
+                        span.title.is-6 #{_data.price_currency} 
+                        |&nbsp;&nbsp;&nbsp;
+                        span.title.is-4.has-text-warning #{_data.price} 
+                    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         .media-right
             table
                 thead
@@ -24,11 +25,41 @@ mixin car_card(_data)
                             p power 
                                 span.is-size-7 
                                     | (#{_data.power_measure}) 
-                                    | :  
-                        td.has-text-right #{_data.power}
+                                    | :   
+                        td.has-text-right.has-text-weight-semibold #{_data.power}
                     tr
-                        td Five
-                        td Six
+                        td 
+                            p mileage 
+                                span.is-size-7 
+                                    | (#{_data.mileage_measure}) 
+                                    | :   
+                        td.has-text-right.has-text-weight-semibold #{_data.mileage}
+                    tr 
+                        td
+                            |&nbsp;
                     tr
-                        td Seven
-                        td Eight 
+                        td 
+                            p payload 
+                                    | :   
+                        td.has-text-right.has-text-weight-semibold #{_data.payload}
+                    tr
+                        td 
+                            p gross weight 
+                                    | :   
+                        td.has-text-right.has-text-weight-semibold #{_data.gross_weight}
+                    tr
+                        td 
+                            p axle configuration 
+                                    | :   
+                        td.has-text-right.has-text-weight-semibold #{_data.axle_configuration}
+                    tr 
+                        td 
+                            |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    tr
+                        td 
+                            p year 
+                                    | :   
+                        td.has-text-right.has-text-weight-semibold.title.is-5 #{_data.year}     
+                        
+
+

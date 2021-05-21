@@ -1,5 +1,7 @@
 .hero-body
     .container.has-navbar-fixed-top.has-navbar-fixed-bottom
+        nav.level
+            .title.is-3.level-item.has-text-centered  #{slogan}
         each car in stock 
             include card_car
             +car_card(car)

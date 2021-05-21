@@ -28,7 +28,11 @@ export default {
                     'pug-loader?pretty=true',
                     // {loader: ''}
                 ]
-            }
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+              }
         ]
     },
 
@@ -43,7 +47,10 @@ export default {
             template: `${PAGES_DIR}/index.pug`,
             filename: 'index.html',
             templateParameters: {
-                title: 'foo',
+                slogan: data.page_meta.h1,
+                keywords: data.page_meta.meta_keywords,
+                descript: data.page_meta.meta_description,
+                title: data.title,
                 content: 'bar',
                 brdcrmbs: data.breadcrumbs,
                 navig: data.nav,
