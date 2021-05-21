@@ -3,8 +3,9 @@ mixin car_card(_data)
         figure.media-left
             p.image.is-4by3
                 img(src='./images/'+_data.image)
+            p.title.is-4 #{_data.make} 
+            |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         .media-content
-            p.title.is-4 #{_data.make}
             p.subtitle.is-6 model: #{_data.model}
             p.is-7 type: #{_data.type}
             .content
