@@ -2,7 +2,7 @@ mixin car_card(_data)
     article.media
         figure.media-left
             p.image.is-4by3
-                img(src='./src/images/'+_data.image alt='Placeholder image')
+                img(src='./images/'+_data.image)
         .media-content
             p.title.is-4 #{_data.make}
             p.subtitle.is-6 model: #{_data.model}

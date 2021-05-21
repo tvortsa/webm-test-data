@@ -14,7 +14,10 @@ console.dir(`data: ${data.page_meta.h1}`);
 
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import HtmlWebpackPugPlugin from 'html-webpack-pug-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 // import CleanWebpackPlugin from 'clean-webpack-plugin';
+
+
 
 export default {
 
@@ -32,7 +35,7 @@ export default {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
-              }
+            }
         ]
     },
 
@@ -55,10 +58,18 @@ export default {
                 brdcrmbs: data.breadcrumbs,
                 navig: data.nav,
                 stock: data.stock
-              },
+            },
             minify: false,
             inject: true
         }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: './src/images',
+                    to: './images'
+                }
+              ],
+            })
         // new HtmlWebpackPugPlugin(),
         // new CleanWebpackPlugin(['dist']),
     ]
